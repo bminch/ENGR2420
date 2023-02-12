@@ -1,5 +1,5 @@
 %
-% LINEFIT attempts to fit a line to an appropriate part of a given curve.
+% LINEFIT Fits tries to fit a line to an appropriate part of a given curve.
 %    LINEFIT(X, Y, EPSILON) steps through the curve specified by vectors
 %    X and Y searching for a consecutive run of at least 10 coordinate
 %    pairs to which a straight line can be fit using linear regression with
@@ -46,7 +46,7 @@ while i<length(x),
         b=(sumY-m*sumX)/N;
         R2=SXY*SXY/(SXX*SYY);
     end
-    if ((N>5) & (abs(m)>abs(mmax))),
+    if ((N>10) & (abs(m)>abs(mmax))),
         first=i;
         last=j;
         mmax=m;
