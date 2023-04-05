@@ -24,6 +24,8 @@ function loadspice(filename)
     line = strrep(line, ')', '');
     line = strrep(line, 'V(', '');
     line = strrep(line, 'I(', '');
+    line = strrep(line, 'Ix(', '');
+    line = strrep(line, ':', '_');
     names = split(strtrim(line));
 
     state = 0;
